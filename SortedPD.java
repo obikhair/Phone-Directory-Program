@@ -15,11 +15,6 @@ public class SortedPD extends ArrayBasedPD {
      there, the index where it should be added.
      */
     protected int find (String name) {
-//        for (int i = 0; i < size; i++)
-//            if (theDirectory[i].getName().equals(name))
-//                return i;
-//
-//        return size;
         int low = 0;
         int high = size;
 
@@ -51,12 +46,6 @@ public class SortedPD extends ArrayBasedPD {
      @return The DirectoryEntry that was just added.
      */
     protected DirectoryEntry add (int index, DirectoryEntry newEntry) {
-//        if (size == theDirectory.length)
-//            reallocate();
-//        theDirectory[size] = theDirectory[index];
-//        theDirectory[index] = newEntry;
-//        size++;
-//        return newEntry;
         if (size == theDirectory.length)
             reallocate();
         for (int i = size; i > index; i--) {
@@ -80,7 +69,4 @@ public class SortedPD extends ArrayBasedPD {
         size--;
         return entry;
     }
-
-
-
 }
